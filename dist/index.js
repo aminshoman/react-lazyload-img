@@ -175,7 +175,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    LazyLoadImg.prototype.checkVisible = function checkVisible() {
-	        var ele = ReactDOM.findDOMNode(this.refs['img']);
+	        var ele = ReactDOM.findDOMNode(this.img);
 	        var top = ele['y'];
 	        var height = ele.offsetHeight;
 	        var min = this.state.viewport.top;
@@ -215,7 +215,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var rest = _splitObject2[0];
 	        var imgProps = _splitObject2[1];
 
-	        return React.createElement('img', _extends({ ref: 'img', src: src }, imgProps));
+	        return React.createElement('img', _extends({ ref:c=>this.img=c, src: src }, imgProps));
 	    };
 
 	    return LazyLoadImg;
