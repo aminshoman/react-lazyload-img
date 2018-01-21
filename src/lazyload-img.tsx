@@ -63,7 +63,7 @@ export default class LazyLoadImg extends React.Component<LazyLoadImgProps, LazyL
   }
 
   checkVisible() {
-    let ele = ReactDOM.findDOMNode(this.refs['img']) as HTMLElement;
+    let ele = ReactDOM.findDOMNode(this.img) as HTMLElement;
     let top = ele['y'];
     let height = ele.offsetHeight;
 
@@ -104,7 +104,7 @@ export default class LazyLoadImg extends React.Component<LazyLoadImgProps, LazyL
 
     return (
       <img
-        ref="img"
+        ref={c=>this.img=c}
         src={src}
         {...imgProps}
         />
